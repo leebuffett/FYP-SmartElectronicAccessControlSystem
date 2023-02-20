@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".led_control">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"></include>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/led_img"
+            android:layout_width="161dp"
+            android:layout_height="148dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/led_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="100 %"
+            android:textColor="#0B0A0A"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/led_img" />
+
+        <TextView
+            android:id="@+id/led_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:text="Tap to on the LED"
+            android:textColor="#0B0A0A"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/led_status" />
+
+
+        <Button
+            android:id="@+id/led_button"
+            android:layout_width="83dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/roundedbutton"
+            android:text="Off"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/led_textView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

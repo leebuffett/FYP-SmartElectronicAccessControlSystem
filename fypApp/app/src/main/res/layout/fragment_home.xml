@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="56dp"
+    tools:context=".Fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.4"
+            app:auto_cycle="true"
+            app:corner_radius="3"
+            app:delay="1"
+            app:error_image="@mipmap/blank"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:period="3000"
+            app:placeholder="@mipmap/blank">
+        </com.denzcoskun.imageslider.ImageSlider>
+
+        <LinearLayout
+            android:id="@+id/constrain1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider"
+            android:weightSum="4">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/hardware_control"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardMaxElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="10dp"
+                        android:text="Hardware Control"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:textSize="15sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="top|center_horizontal"
+                        android:background="@mipmap/hardware_control" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/file_download"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardMaxElevation="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="10dp"
+                        android:text="File Download"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:textSize="15sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="top|center_horizontal"
+                        android:background="@mipmap/file_download" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/constrain2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constrain1"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardMaxElevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/live_stream">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="10dp"
+                        android:text="Live Stream"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:textSize="15sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="top|center_horizontal"
+                        android:background="@mipmap/live_stream" />
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardMaxElevation="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/emp_management">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="10dp"
+                        android:text="Employee Management"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:textSize="15sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="top|center_horizontal"
+                        android:background="@mipmap/emp_manage" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

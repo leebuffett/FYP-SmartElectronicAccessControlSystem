@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hardware_control">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/bar_layout"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="60dp"
+                app:cardBackgroundColor="#FFF6F6"
+                app:cardCornerRadius="30dp"
+                app:cardMaxElevation="20dp"
+                app:strokeColor="#0B0A0A"
+                app:strokeWidth="2dp"
+                android:id="@+id/door_lock_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animationCache="false"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/door_lock_card" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:text="Door Lock"
+                        android:textAlignment="center"
+                        android:textColor="#020202"
+                        android:textSize="20sp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="#FFF6F6"
+                app:cardCornerRadius="30dp"
+                app:cardMaxElevation="20dp"
+                android:layout_marginTop="5dp"
+                app:strokeColor="#0B0A0A"
+                app:strokeWidth="2dp"
+                android:id="@+id/LED_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animationCache="false"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/led_card" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="LED"
+                        android:textAlignment="center"
+                        android:textColor="#020202"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="#FFF6F6"
+                app:cardCornerRadius="30dp"
+                app:cardMaxElevation="20dp"
+                app:strokeColor="#0B0A0A"
+                app:strokeWidth="2dp"
+                android:id="@+id/ultrasonic_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animationCache="false"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ultrasonic_card" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Ultrasonic Sensor"
+                        android:textAlignment="center"
+                        android:textColor="#020202"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="#FFF6F6"
+                app:cardCornerRadius="30dp"
+                app:cardMaxElevation="20dp"
+                app:strokeColor="#0B0A0A"
+                app:strokeWidth="2dp"
+                android:id="@+id/alarm_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animationCache="false"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/alarm_card" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Alarm"
+                        android:textAlignment="center"
+                        android:textColor="#020202"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

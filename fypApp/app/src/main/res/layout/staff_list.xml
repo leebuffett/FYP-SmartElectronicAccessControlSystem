@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".staff_list">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/bar_layout"></include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp" />
+
+    <TextView
+        android:id="@+id/noNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginRight="55dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/frameNotification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="56dp">
+
+        <Button
+            android:id="@+id/offlineBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:background="@color/colorLogin"
+            android:outlineAmbientShadowColor="#F3EEEE"
+            android:outlineSpotShadowColor="#F4F2F8"
+            android:text="Reload"
+            android:textColor="#F8ECEC"
+            android:textColorHighlight="#575252" />
+
+        <TextView
+            android:id="@+id/networktxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Server Busy / Network Connection Error" />
+
+    </FrameLayout>
+
+</RelativeLayout>
